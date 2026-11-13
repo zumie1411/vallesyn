@@ -1,99 +1,93 @@
-# VALLESYN
-### Scientific 3D Mars Exploration & Terrain Intelligence Platform
+# 🔴 VALLESYN
+### Explore Mars. Understand the terrain. Imagine the next mission.
 
-Vallesyn is a web-based planetary exploration platform designed to visualize Martian topography and explore regional terrain characteristics using NASA planetary datasets.
+<p align="center">
+  <a href="https://vallesyn.onrender.com"><strong>🚀 Open Live Website</strong></a>
+  &nbsp;•&nbsp;
+  <a href="https://github.com/zumie1411/vallesyn"><strong>💻 View Source Code</strong></a>
+</p>
 
-## Overview
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Web%20Application-e45b35?style=for-the-badge" alt="Web application">
+  <img src="https://img.shields.io/badge/Focus-Mars%20Terrain-252525?style=for-the-badge" alt="Mars terrain">
+  <img src="https://img.shields.io/badge/Data-NASA%20Planetary%20Datasets-1d5b91?style=for-the-badge" alt="NASA planetary datasets">
+</p>
 
-Vallesyn combines interactive 3D visualization with scientific terrain analysis to provide an accessible exploration environment for Mars.
+**Vallesyn** is a web-based Mars exploration and terrain intelligence project. It brings planetary data and interactive 3D visualisation together to make the Martian surface easier to explore and understand.
 
-## Features
+## 🌐 Explore Vallesyn
 
-- **Global Mars Explorer** — Interactive 3D Mars globe using MOLA elevation data.
-- **Regional Explorer** — High-resolution East Melas terrain visualization using CTX DEM data.
-- **Terrain Analysis** — Processed elevation and slope visualizations.
-- **Elevation Analysis** — Regional digital elevation model exploration.
-- **Slope Analysis** — Terrain slope calculation and five-class slope categorization.
-- **Surface Roughness** — MOLA-derived rendered roughness reference visualization.
-- **Data Layers** — Dataset exploration and visualization controls.
-- **Mission Planner** — Select exploration regions and save mission notes during a session.
+<p align="center">
+  <a href="https://vallesyn.onrender.com">
+    <img src="https://img.shields.io/badge/LAUNCH%20VALLESYN-Open%20the%20live%20experience-e45b35?style=for-the-badge" alt="Launch Vallesyn">
+  </a>
+</p>
 
-## Data Sources
+## 🪐 What you can explore
 
-- NASA Mars Orbiter Laser Altimeter (MOLA)
-- Mars Reconnaissance Orbiter Context Camera (CTX) terrain data
+- **Global Mars Explorer** — Explore Mars through an interactive 3D globe.
+- **Regional Terrain Explorer** — Investigate the East Melas region using terrain data.
+- **Elevation & Slope** — Visualise elevation and project-defined slope classes.
+- **Surface Visualisation** — Switch between available scientific data layers.
+- **Mission Planner** — Select exploration areas and keep mission notes during a session.
 
-## Technology Stack
+## 🛰️ Data behind the experience
 
-- HTML5
-- CSS3
-- JavaScript (ES Modules)
-- Three.js
-- Python
-- NumPy
-- Rasterio
-- Matplotlib
-- Pillow
+Vallesyn works with planetary datasets including:
 
-## Project Structure
+- **MOLA** — Mars Orbiter Laser Altimeter elevation data.
+- **CTX** — Context Camera terrain data from the Mars Reconnaissance Orbiter.
+
+The datasets are processed and visualised to support exploration of Martian topography.
+
+## ⚙️ Built with
+
+| Area | Tools |
+|---|---|
+| Frontend | HTML5, CSS3, JavaScript |
+| 3D visualisation | Three.js |
+| Data processing | Python, NumPy, Rasterio |
+| Visualisation utilities | Matplotlib, Pillow |
+| Deployment | Render |
+
+## 🧭 Run locally
+
+You will need Python installed.
+
+```bash
+git clone https://github.com/zumie1411/vallesyn.git
+cd vallesyn
+python -m http.server 8000
+```
+
+Then open **http://localhost:8000** in your browser.
+
+## 📁 Project layout
 
 ```text
 vallesyn/
 ├── assets/
-│   └── images/
 ├── css/
-│   ├── style.css
-│   └── responsive.css
 ├── js/
-│   ├── script.js
-│   ├── map.js
-│   ├── layers.js
-│   ├── navigation.js
-│   ├── science.js
-│   ├── planner.js
-│   └── enviroment.js
 ├── data/
-│   └── (local scientific datasets)
+├── mission-portal/
+│   ├── index.html
+│   ├── css/
+│   └── js/
 ├── index.html
 └── README.md
 ```
 
-## Running Locally
+## 🔬 Scientific context
 
-1. Clone the repository:
+Vallesyn is an exploration and visualisation project, not a substitute for peer-reviewed scientific analysis. Slope classes use project-defined thresholds, and the roughness layer is a rendered visual reference rather than a numerical roughness measurement. Interpret visualisations in the context of dataset resolution, coverage, projection, and processing assumptions.
 
-```bash
-git clone https://github.com/zumie1411/vallesyn.git
-```
+## 🚧 Project status
 
-2. Open the project folder:
-
-```bash
-cd vallesyn
-```
-
-3. Start a local server:
-
-```bash
-python -m http.server 8000
-```
-
-4. Open:
-
-```text
-http://localhost:8000
-```
-
-## Scientific Notes
-
-Slope classifications use project-defined thresholds. The roughness reference is a rendered RGB visualization, not a numerical roughness measurement.
-
-Scientific results should be interpreted with consideration of source resolution, projection, data coverage, and processing assumptions.
-
-## Project Status
-
-Development build. Features and scientific processing workflows may continue to evolve.
+Vallesyn is an evolving project. Features, datasets, and analysis workflows may change as development continues.
 
 ---
 
-**Vallesyn — Exploring the Martian Surface Through Data and Visualization.**
+<p align="center">
+  **VALLESYN** · A closer look at the Red Planet.
+</p>
