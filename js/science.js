@@ -1,4 +1,4 @@
-
+﻿
 export function initScience() {
     const pageHeading = document.querySelector(".page-heading");
     const marsWorkspace = document.querySelector(".mars-workspace");
@@ -12,12 +12,12 @@ export function initScience() {
                 {
                     title: "Processed Elevation Model",
                     description: "Visual representation of processed East Melas terrain elevation.",
-                    image: "data/processed/working_dem_visualization.png"
+                    image: "assets/images/working_dem_visualization.png"
                 },
                 {
                     title: "Slope Classification",
                     description: "Categorized terrain slope data for regional analysis.",
-                    image: "data/processed/east_melas_slope_classes.png"
+                    image: "assets/images/east_melas_slope_classes.png"
                 }
             ]
         },
@@ -26,7 +26,7 @@ export function initScience() {
                 {
                     title: "Digital Elevation Model",
                     description: "Processed elevation visualization of East Melas.",
-                    image: "data/processed/working_dem_visualization.png"
+                    image: "assets/images/working_dem_visualization.png"
                 }
             ]
         },
@@ -35,12 +35,12 @@ export function initScience() {
                 {
                     title: "Slope Visualization",
                     description: "Calculated terrain slope across East Melas.",
-                    image: "data/processed/east_melas_slope_visualization.png"
+                    image: "assets/images/east_melas_slope_visualization.png"
                 },
                 {
                     title: "Slope Classification",
                     description: "Terrain classified into slope categories.",
-                    image: "data/processed/east_melas_slope_classes.png"
+                    image: "assets/images/east_melas_slope_classes.png"
                 }
             ]
         },
@@ -150,3 +150,4 @@ export function initScience() {
 
     console.log("Vallesyn Science initialized.");
 }
+
