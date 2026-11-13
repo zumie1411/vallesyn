@@ -1,0 +1,461 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --background: #080c14;
+    --surface: #0d1420;
+    --surface-light: #131e2d;
+    --border: #243247;
+    --text: #e8edf5;
+    --muted: #8291a7;
+    --accent: #d99b70;
+    --green: #65c99b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+}
+
+button {
+    font: inherit;
+}
+
+.app-container {
+    min-height: 100vh;
+}
+
+.topbar {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-symbol {
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.brand-details h1 {
+    font-size: 17px;
+    letter-spacing: 4px;
+}
+
+.brand-details span {
+    display: block;
+    margin-top: 5px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.header-center {
+    color: #78879b;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.system-status {
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.status-indicator,
+.panel-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 10px #65c99b66;
+}
+
+.main-layout {
+    display: flex;
+    min-height: calc(100vh - 76px);
+}
+
+.sidebar {
+    position: relative;
+    width: 245px;
+    flex-shrink: 0;
+    padding: 28px 17px;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+}
+
+.sidebar-section {
+    margin-bottom: 28px;
+}
+
+.section-label {
+    display: block;
+    margin: 0 0 15px 8px;
+    color: #728198;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.8px;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 11px;
+    margin-bottom: 5px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: transparent;
+    color: #a4b1c3;
+    text-align: left;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.nav-button span {
+    width: 17px;
+    color: #8999af;
+    font-size: 15px;
+}
+
+.nav-button:hover {
+    background: var(--surface-light);
+    color: var(--text);
+}
+
+.nav-button.active {
+    background: #1b293a;
+    border-color: #344359;
+    color: var(--accent);
+}
+
+.nav-button.active span {
+    color: var(--accent);
+}
+
+.sidebar-divider {
+    height: 1px;
+    margin: 23px 0;
+    background: var(--border);
+}
+
+.sidebar-bottom {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-bottom span,
+.sidebar-bottom small {
+    color: #75859b;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.sidebar-bottom strong {
+    color: #c4cfdd;
+    font-size: 11px;
+}
+
+.content-area {
+    flex: 1;
+    min-width: 0;
+    padding: 29px;
+}
+
+.page-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.page-heading h2 {
+    margin: 9px 0;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.page-heading p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.view-indicator {
+    padding: 10px 13px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: #b6c3d3;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.mars-workspace {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 250px;
+    gap: 16px;
+    align-items: stretch;
+}
+
+#mars-container {
+    position: relative;
+    min-width: 0;
+    height: min(66vh, 650px);
+    min-height: 430px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background:
+        radial-gradient(ellipse at center, #192a40 0%, #0d1523 55%, #080c14 100%);
+}
+
+#mars-container canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#loading-screen {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    color: var(--accent);
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+#loading-screen span {
+    color: var(--muted);
+    font-size: 9px;
+}
+
+.loader {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #344359;
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.viewport-controls {
+    position: absolute;
+    z-index: 2;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.viewport-controls button {
+    padding: 9px 11px;
+    border: 1px solid #46566c;
+    border-radius: 4px;
+    background: #101b2bdc;
+    color: #d2dce9;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.viewport-controls button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.planet-information {
+    position: absolute;
+    bottom: 19px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    pointer-events: none;
+}
+
+.planet-information span,
+.planet-information small {
+    color: #98a8bb;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.7px;
+}
+
+.planet-information h3 {
+    color: #e9b58d;
+    font-size: 22px;
+    letter-spacing: 4px;
+}
+
+.information-panel {
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--surface);
+}
+
+.panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #c2ccda;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+}
+
+.panel-dot {
+    margin: 0;
+}
+
+.data-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 19px;
+}
+
+.data-metric span {
+    color: #75869d;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.data-metric strong {
+    color: #e0e7f0;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.panel-divider {
+    height: 1px;
+    margin: 20px 0;
+    background: var(--border);
+}
+
+.elevation-legend {
+    height: 10px;
+    margin-top: 12px;
+    border-radius: 5px;
+    background: linear-gradient(
+        to right,
+        #122350,
+        #2d5587,
+        #696e78,
+        #a5694b,
+        #d29b69,
+        #f5d7a5
+    );
+}
+
+.legend-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    color: #8796aa;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+}
+
+.panel-note {
+    margin-top: 17px;
+    color: #8392a7;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.bottom-information {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 17px;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--surface);
+}
+
+.info-card span {
+    color: #78889e;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.info-card strong {
+    color: #dce4ee;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+::selection {
+    background: #d99b7055;
+    color: white;
+}

@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Vallesyn - Scientific 3D Mars exploration and terrain intelligence platform">
+
+    <title>Vallesyn | Mars Terrain Intelligence</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- HEADER -->
+        <header class="topbar">
+
+            <div class="brand">
+                <div class="brand-symbol">V</div>
+
+                <div class="brand-details">
+                    <h1>VALLESYN</h1>
+                    <span>MARS TERRAIN INTELLIGENCE</span>
+                </div>
+            </div>
+
+            <div class="header-center">
+                PLANETARY EXPLORATION SYSTEM
+            </div>
+
+            <div class="system-status" id="system-status">
+                <span class="status-indicator"></span>
+                SYSTEM INITIALIZING
+            </div>
+
+        </header>
+
+        <!-- MAIN WORKSPACE -->
+        <main class="main-layout">
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+
+                <div class="sidebar-section">
+                    <span class="section-label">EXPLORATION</span>
+
+                    <button class="nav-button active" data-page="global">
+                        <span>◉</span> Global Explorer
+                    </button>
+
+                    <button class="nav-button" data-page="regional">
+                        <span>⌖</span> Regional Explorer
+                    </button>
+
+                    <button class="nav-button" data-page="terrain">
+                        <span>◧</span> Terrain Analysis
+                    </button>
+
+                    <button class="nav-button" data-page="layers">
+                        <span>◈</span> Data Layers
+                    </button>
+                </div>
+
+                <div class="sidebar-divider"></div>
+
+                <div class="sidebar-section">
+                    <span class="section-label">SCIENTIFIC TOOLS</span>
+
+                    <button class="nav-button" data-page="elevation">
+                        <span>⌁</span> Elevation
+                    </button>
+
+                    <button class="nav-button" data-page="slope">
+                        <span>⌁</span> Slope Analysis
+                    </button>
+
+                    <button class="nav-button" data-page="roughness">
+                        <span>⌁</span> Surface Roughness
+                    </button>
+                </div>
+
+                <div class="sidebar-divider"></div>
+
+                <div class="sidebar-section">
+                    <span class="section-label">MISSION TOOLS</span>
+
+                    <button class="nav-button" data-page="planner">
+                        <span>⌖</span> Mission Planner
+                    </button>
+                </div>
+
+                <div class="sidebar-bottom">
+                    <span>DATA SOURCES</span>
+                    <strong>NASA MOLA / CTX</strong>
+                    <small>VALLESYN DEVELOPMENT BUILD</small>
+                </div>
+
+            </aside>
+
+            <!-- CONTENT -->
+            <section class="content-area">
+
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">PLANETARY SYSTEM / GLOBAL</span>
+
+                        <h2 id="page-title">
+                            Global Mars Explorer
+                        </h2>
+
+                        <p id="page-description">
+                            Explore Martian topography through global MOLA elevation data.
+                        </p>
+                    </div>
+
+                    <div class="view-indicator">
+                        <span class="status-indicator"></span>
+                        3D ENVIRONMENT
+                    </div>
+                </div>
+
+                <!-- 3D VIEWPORT -->
+                <section class="mars-workspace">
+
+                    <div id="mars-container">
+
+                        <div id="loading-screen">
+                            <div class="loader"></div>
+                            <p>INITIALIZING PLANETARY ENVIRONMENT</p>
+                            <span>LOADING MOLA DATA</span>
+                        </div>
+
+                        <div class="viewport-controls">
+                            <button id="reset-view">RESET VIEW</button>
+                            <button id="rotation-toggle">PAUSE ROTATION</button>
+                        </div>
+
+                        <div class="planet-information">
+                            <span>PLANETARY BODY</span>
+                            <h3>MARS</h3>
+                            <small>GLOBAL TOPOGRAPHY</small>
+                        </div>
+
+                    </div>
+
+                    <!-- DATA PANEL -->
+                    <aside class="information-panel">
+
+                        <div class="panel-heading">
+                            <span>PLANETARY DATA</span>
+                            <span class="panel-dot"></span>
+                        </div>
+
+                        <div class="data-metric">
+                            <span>DATASET</span>
+                            <strong id="dataset-name">MOLA GLOBAL DEM</strong>
+                        </div>
+
+                        <div class="data-metric">
+                            <span>DIMENSIONS</span>
+                            <strong id="dataset-dimensions">23041 × 46081</strong>
+                        </div>
+
+                        <div class="data-metric">
+                            <span>DATA TYPE</span>
+                            <strong id="dataset-type">INT16</strong>
+                        </div>
+
+                        <div class="data-metric">
+                            <span>RESOLUTION</span>
+                            <strong id="dataset-resolution">GLOBAL COVERAGE</strong>
+                        </div>
+
+                        <div class="panel-divider"></div>
+
+                        <div class="panel-heading">
+                            ELEVATION VISUALIZATION
+                        </div>
+
+                        <div class="elevation-legend"></div>
+
+                        <div class="legend-labels">
+                            <span>LOW</span>
+                            <span>HIGH</span>
+                        </div>
+
+                        <p class="panel-note">
+                            Relative elevation visualization derived from NASA planetary elevation data.
+                        </p>
+
+                    </aside>
+
+                </section>
+
+                <!-- FOOTER INFORMATION -->
+                <section class="bottom-information">
+
+                    <div class="info-card">
+                        <span>ACTIVE DATASET</span>
+                        <strong>MOLA GLOBAL DEM</strong>
+                    </div>
+
+                    <div class="info-card">
+                        <span>PLANET</span>
+                        <strong>MARS</strong>
+                    </div>
+
+                    <div class="info-card">
+                        <span>VISUALIZATION</span>
+                        <strong>3D GLOBE</strong>
+                    </div>
+
+                    <div class="info-card">
+                        <span>PLATFORM</span>
+                        <strong>VALLESYN</strong>
+                    </div>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script type="module" src="js/script.js"></script>
+
+</body>
+</html>
