@@ -237,6 +237,67 @@
 
     </div>
 
+
+        <section class="mission-console" id="mission-console">
+            <div class="console-heading">
+                <div>
+                    <span class="console-kicker">VALLESYN / FIELD OPERATIONS</span>
+                    <h2>Mission Brief Studio</h2>
+                    <p>Turn a terrain investigation into a shareable research brief.</p>
+                </div>
+                <span class="console-live"><i></i> LOCAL WORKSPACE</span>
+            </div>
+            <div class="console-grid">
+                <form class="brief-form" id="brief-form">
+                    <label>INVESTIGATION TITLE
+                        <input id="brief-title" maxlength="90" value="East Melas Terrain Reconnaissance" required>
+                    </label>
+                    <div class="brief-two">
+                        <label>REGION / AREA
+                            <input id="brief-region" maxlength="70" value="East Melas, Mars" required>
+                        </label>
+                        <label>MISSION OBJECTIVE
+                            <select id="brief-objective">
+                                <option>Terrain characterization</option>
+                                <option>Elevation investigation</option>
+                                <option>Slope assessment</option>
+                                <option>CTX image review</option>
+                                <option>General reconnaissance</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label>REFERENCE COORDINATES
+                        <input id="brief-coordinates" maxlength="70" value="18.65° S, 67.50° W">
+                    </label>
+                    <label>SCIENTIFIC OBSERVATIONS
+                        <textarea id="brief-observations" rows="4" maxlength="1200" placeholder="Record what you observe in the selected data layers. Separate observations from interpretations."></textarea>
+                    </label>
+                    <div class="brief-checks">
+                        <label><input type="checkbox" id="check-elevation"> Elevation layer reviewed</label>
+                        <label><input type="checkbox" id="check-slope"> Slope layer reviewed</label>
+                        <label><input type="checkbox" id="check-ctx"> CTX imagery reviewed</label>
+                        <label><input type="checkbox" id="check-limitations"> Data limitations considered</label>
+                    </div>
+                    <div class="brief-actions">
+                        <button type="submit" class="brief-primary">GENERATE MISSION BRIEF ↗</button>
+                        <button type="button" id="save-observation" class="brief-secondary">SAVE FIELD NOTE</button>
+                    </div>
+                    <p class="brief-feedback" id="brief-feedback" role="status">Your work stays in this browser until you export it.</p>
+                </form>
+                <aside class="brief-preview">
+                    <span class="preview-label">MISSION READINESS</span>
+                    <div class="readiness-number" id="readiness-number">0<span>/4</span></div>
+                    <div class="readiness-track"><div id="readiness-fill"></div></div>
+                    <p id="readiness-copy">Complete the review checklist to track your investigation.</p>
+                    <div class="preview-divider"></div>
+                    <span class="preview-label">FIELD NOTEBOOK</span>
+                    <div id="field-notes" class="field-notes"><p class="empty-notes">No field notes saved yet.</p></div>
+                    <button type="button" id="clear-notes" class="clear-notes">CLEAR FIELD NOTES</button>
+                    <div class="science-disclaimer">Research aid only. This brief records user-entered observations; it does not certify landing safety or replace scientific validation.</div>
+                </aside>
+            </div>
+        </section>
+
     <script type="module" src="js/script.js"></script>
 
 </body>
