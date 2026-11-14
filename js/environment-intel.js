@@ -162,6 +162,6 @@ function initMedaAnalyzer() {
         }
     });
     plotButton.addEventListener("click", drawPlot);
-    window.addEventListener("resize", () => { if (rows.length && !empty.hidden) drawPlot(); });
+    window.addEventListener("resize", () => { if (rows.length && empty.hidden) drawPlot(); });
     console.log("Vallesyn MEDA CSV analyzer initialized.");
 }
