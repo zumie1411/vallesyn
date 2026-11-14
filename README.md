@@ -31,14 +31,15 @@
 - **Scientific Data Layers** — Switch between available terrain visualisations.
 - **Mission Planner** — Select exploration areas and keep mission notes during a session.
 
-## 🛰️ Data behind the experience
+## 🛰️ NASA data and scientific resources
 
-Vallesyn works with planetary datasets including:
+Vallesyn uses or references planetary data and scientific resources from NASA's Planetary Data System (PDS), including:
 
-- **MOLA** — Mars Orbiter Laser Altimeter elevation data.
-- **CTX** — Context Camera imagery from the Mars Reconnaissance Orbiter.
+- **MOLA — Mars Orbiter Laser Altimeter:** [PDS Geosciences Node: MOLA data archive](https://pds-geosciences.wustl.edu/missions/mgs/mola.html). MOLA altimetry products support the global Mars topography context.
+- **CTX — Mars Reconnaissance Orbiter Context Camera:** [NASA PDS CTX instrument record](https://pds.nasa.gov/ds-view/pds/viewContext.jsp?identifier=urn%3Anasa%3Apds%3Acontext%3Ainstrument%3Actx.mro). CTX-derived imagery and regional terrain products support the East Melas workspace.
+- **MEDA — Mars Environmental Dynamics Analyzer aboard Perseverance:** [PDS Atmospheres Node: Perseverance MEDA archive](https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/PERSEVERANCE/meda.html). The MEDA analyzer can process compatible CSV files supplied by the user; it does not connect to live rover telemetry.
 
-The datasets are processed and visualised to support exploration of Martian topography.
+These links identify the relevant NASA/PDS archives and instrument resources. They are source references, not claims of NASA endorsement. Please consult each archive's product documentation for dataset versions, units, coverage, and usage details.
 
 ## ⚙️ Built with
 
