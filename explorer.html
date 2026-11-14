@@ -105,6 +105,10 @@
                     <button class="nav-button" data-page="crew">
                         <span>✚</span> Crew Support
                     </button>
+
+                    <button class="nav-button" data-page="environment">
+                        <span>◌</span> Environmental Intel
+                    </button>
                 </div>
 
                 <div class="sidebar-bottom">
@@ -342,6 +346,74 @@
                         </article>
                     </div>
                     <p class="crew-disclaimer">VALLESYN IS AN INDEPENDENT EDUCATIONAL RESEARCH PROJECT. These tools are planning aids and simulations only. They are not connected to NASA mission control, do not receive live spacecraft telemetry, and must not be used for real crew decisions.</p>
+                </section>
+
+                <!-- MARS ENVIRONMENTAL INTELLIGENCE -->
+                <section class="environment-workspace" id="mars-environment" hidden>
+                    <div class="environment-heading">
+                        <div>
+                            <span class="environment-kicker">VALLESYN / PLANETARY ENVIRONMENT</span>
+                            <h2>Mars Environmental Intelligence</h2>
+                            <p>Explore instrument datasets archived by NASA's Planetary Data System.</p>
+                        </div>
+                        <span class="environment-archive-tag">ARCHIVED SCIENCE DATA</span>
+                    </div>
+
+                    <div class="environment-notice">
+                        <strong>DATA STATUS: ARCHIVE ACCESS</strong>
+                        <p>These are links to archived instrument datasets, not live weather readings. Vallesyn does not currently ingest or display real-time Mars surface telemetry. Check each dataset's product documentation and observation times before analysis.</p>
+                    </div>
+
+                    <div class="environment-grid">
+                        <article class="environment-card">
+                            <span class="environment-card-kicker">PERSEVERANCE / MEDA</span>
+                            <h3>Air & Surface Temperature</h3>
+                            <p>Air temperature sensor (ATS) and thermal infrared sensor (TIRS) products.</p>
+                            <span class="environment-data-type">CALIBRATED DATA · CSV</span>
+                            <a href="https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/PERSEVERANCE/meda.html" target="_blank" rel="noopener noreferrer">OPEN MEDA ARCHIVE ↗</a>
+                        </article>
+                        <article class="environment-card">
+                            <span class="environment-card-kicker">PERSEVERANCE / MEDA</span>
+                            <h3>Atmospheric Pressure</h3>
+                            <p>Pressure sensor products for studying the local atmospheric environment.</p>
+                            <span class="environment-data-type">CALIBRATED & DERIVED · CSV</span>
+                            <a href="https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/PERSEVERANCE/meda.html" target="_blank" rel="noopener noreferrer">OPEN MEDA ARCHIVE ↗</a>
+                        </article>
+                        <article class="environment-card">
+                            <span class="environment-card-kicker">PERSEVERANCE / MEDA</span>
+                            <h3>Wind & Humidity</h3>
+                            <p>Wind sensor and relative humidity products. Check coverage and missing intervals in the archive.</p>
+                            <span class="environment-data-type">CALIBRATED DATA · CSV</span>
+                            <a href="https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/PERSEVERANCE/meda.html" target="_blank" rel="noopener noreferrer">OPEN MEDA ARCHIVE ↗</a>
+                        </article>
+                        <article class="environment-card">
+                            <span class="environment-card-kicker">PERSEVERANCE / MEDA</span>
+                            <h3>Radiation & Dust</h3>
+                            <p>Radiation and dust sensor (RDS) products. These are instrument observations, not a crew exposure forecast.</p>
+                            <span class="environment-data-type">CALIBRATED DATA · CSV</span>
+                            <a href="https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/PERSEVERANCE/meda.html" target="_blank" rel="noopener noreferrer">OPEN MEDA ARCHIVE ↗</a>
+                        </article>
+                    </div>
+
+                    <div class="environment-lower">
+                        <article class="environment-source-card">
+                            <span class="environment-card-kicker">PRIMARY DATA SOURCE</span>
+                            <h3>NASA Planetary Data System — Atmospheres Node</h3>
+                            <p>The MEDA archive lists calibrated products for air temperature, pressure, radiation and dust, relative humidity, thermal infrared and wind. Data are provided as downloadable products; review the documentation and metadata for each selection.</p>
+                            <a href="https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/PERSEVERANCE/meda.html" target="_blank" rel="noopener noreferrer">BROWSE PERSEVERANCE MEDA DATA ↗</a>
+                            <a href="https://pds.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA PLANETARY DATA SYSTEM ↗</a>
+                        </article>
+                        <article class="environment-notes-card">
+                            <span class="environment-card-kicker">LOCAL RESEARCH NOTEBOOK</span>
+                            <h3>Environmental Observation</h3>
+                            <label for="environment-note">Record a source, instrument, Sol / timestamp and observation</label>
+                            <textarea id="environment-note" rows="4" maxlength="1000" placeholder="Example: MEDA / RDS — cite the product ID and observation time, then record what the data show."></textarea>
+                            <button type="button" id="environment-save-note">SAVE OBSERVATION</button>
+                            <p id="environment-note-status" role="status">Notes are stored in this browser only.</p>
+                            <div id="environment-saved-notes" class="environment-saved-notes">No observations saved.</div>
+                        </article>
+                    </div>
+                    <p class="environment-disclaimer">Research interface only. Instrument data may be historical, location-specific, incomplete or subject to calibration and processing limitations. It does not provide operational forecasts or certify astronaut safety.</p>
                 </section>
 
             </section>
