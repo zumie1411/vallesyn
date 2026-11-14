@@ -7,6 +7,7 @@ import { initPlanner } from "./planner.js";
 import { initEnvironment } from "./enviroment.js";
 import { initMissionConsole } from "./mission-console.js";
 import { initMissionClock } from "./mission-clock.js";
+import { initCrewSupport } from "./crew-support.js";
 
 function initializeVallesyn() {
     console.log("Initializing Vallesyn...");
@@ -21,6 +22,7 @@ function initializeVallesyn() {
     initPlanner();
     initMissionConsole();
     initMissionClock();
+    initCrewSupport();
 
     window.Vallesyn = {
         marsMap
