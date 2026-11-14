@@ -101,6 +101,10 @@
                     <button class="nav-button" data-page="planner">
                         <span>⌖</span> Mission Planner
                     </button>
+
+                    <button class="nav-button" data-page="crew">
+                        <span>✚</span> Crew Support
+                    </button>
                 </div>
 
                 <div class="sidebar-bottom">
@@ -250,6 +254,94 @@
                         <strong>VALLESYN</strong>
                     </div>
 
+                </section>
+
+                <!-- CREW SUPPORT WORKSPACE -->
+                <section class="crew-support" id="crew-support" hidden>
+                    <div class="crew-heading">
+                        <div>
+                            <span class="crew-kicker">VALLESYN / HUMAN EXPLORATION SUPPORT</span>
+                            <h2>Crew Safety & Mission Link</h2>
+                            <p>Research and simulation tools for planning discussions. Not an operational safety system.</p>
+                        </div>
+                        <span class="crew-local-tag">LOCAL SIMULATION</span>
+                    </div>
+
+                    <div class="crew-grid">
+                        <article class="crew-card">
+                            <span class="crew-card-kicker">01 / SURFACE CONDITIONS</span>
+                            <h3>Terrain Hazard Advisory</h3>
+                            <p class="crew-muted">Select observed conditions to generate review prompts. This tool does not automatically detect hazards or certify a route.</p>
+                            <label>Terrain observation
+                                <select id="crew-terrain-condition">
+                                    <option value="unknown">Unknown / not inspected</option>
+                                    <option value="steep">Steep slope indicated</option>
+                                    <option value="loose">Loose or rocky surface suspected</option>
+                                </select>
+                            </label>
+                            <label>Dust information
+                                <select id="crew-dust-condition">
+                                    <option value="unknown">No local data available</option>
+                                    <option value="observed">Dust observed / reported</option>
+                                    <option value="clear">No dust concern reported</option>
+                                </select>
+                            </label>
+                            <label>Radiation information
+                                <select id="crew-radiation-status">
+                                    <option value="unavailable">Forecast not connected</option>
+                                    <option value="review">Data requires mission review</option>
+                                    <option value="checked">Reviewed externally</option>
+                                </select>
+                            </label>
+                            <ul class="crew-advisory-list" id="crew-advisory-output" aria-live="polite"></ul>
+                            <button type="button" class="crew-link-button" id="crew-open-slope">OPEN SLOPE ANALYSIS ↗</button>
+                        </article>
+
+                        <article class="crew-card">
+                            <span class="crew-card-kicker">02 / EXTRAVEHICULAR ACTIVITY</span>
+                            <h3>EVA Precaution Checklist</h3>
+                            <p class="crew-muted">A planning reminder list. Use the procedures approved for the actual mission and crew.</p>
+                            <div class="eva-checklist">
+                                <label><input type="checkbox" data-eva-check> Suit and life-support status reviewed by crew</label>
+                                <label><input type="checkbox" data-eva-check> Communications and loss-of-signal plan reviewed</label>
+                                <label><input type="checkbox" data-eva-check> Route, return path and terrain data reviewed</label>
+                                <label><input type="checkbox" data-eva-check> Dust and equipment protection procedures reviewed</label>
+                                <label><input type="checkbox" data-eva-check> Radiation forecast and mission limits confirmed</label>
+                                <label><input type="checkbox" data-eva-check> Emergency and abort procedures reviewed</label>
+                            </div>
+                            <div class="eva-progress"><span id="eva-check-count">0 / 6 reviewed</span><div><i id="eva-check-fill"></i></div></div>
+                            <p class="crew-footnote">Checklist completion is not a go/no-go decision or a safety rating.</p>
+                        </article>
+
+                        <article class="crew-card crew-comms-card">
+                            <span class="crew-card-kicker">03 / EARTH–MARS COMMUNICATIONS</span>
+                            <h3>Mission Link Simulator</h3>
+                            <p class="crew-muted">Compose a sample message and simulate a delayed transmission. Nothing is sent to NASA or any external system.</p>
+                            <label>Illustrative one-way signal delay
+                                <select id="crew-delay">
+                                    <option value="4">4 minutes</option>
+                                    <option value="8">8 minutes</option>
+                                    <option value="12" selected>12 minutes</option>
+                                    <option value="18">18 minutes</option>
+                                    <option value="22">22 minutes</option>
+                                </select>
+                            </label>
+                            <label>Sample mission message
+                                <textarea id="crew-message" rows="3" maxlength="500" placeholder="Enter a simulated status update for Earth mission control..."></textarea>
+                            </label>
+                            <div class="crew-comms-actions">
+                                <button type="button" id="crew-send" class="crew-primary">SIMULATE TRANSMISSION</button>
+                                <button type="button" id="crew-receive" class="crew-secondary" hidden>SIMULATE ARRIVAL</button>
+                            </div>
+                            <p class="crew-comms-status" id="crew-comms-status" role="status">Awaiting a sample message.</p>
+                            <div class="crew-comms-log" id="crew-comms-log">NO MESSAGES IN SESSION</div>
+                            <div class="crew-external-links">
+                                <a href="https://eyes.nasa.gov/apps/dsn-now/dsn.html" target="_blank" rel="noopener noreferrer">NASA DSN NOW ↗</a>
+                                <a href="https://science.nasa.gov/mars/mars-relay-network/" target="_blank" rel="noopener noreferrer">MARS RELAY NETWORK ↗</a>
+                            </div>
+                        </article>
+                    </div>
+                    <p class="crew-disclaimer">VALLESYN IS AN INDEPENDENT EDUCATIONAL RESEARCH PROJECT. These tools are planning aids and simulations only. They are not connected to NASA mission control, do not receive live spacecraft telemetry, and must not be used for real crew decisions.</p>
                 </section>
 
             </section>
