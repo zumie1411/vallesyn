@@ -155,6 +155,27 @@
                             <small>GLOBAL TOPOGRAPHY</small>
                         </div>
 
+
+                        <div class="mission-clock" id="mission-clock">
+                            <button class="mission-clock-toggle" id="mission-clock-toggle" type="button" aria-expanded="false" aria-controls="mission-clock-panel">
+                                <span class="clock-live-dot"></span>
+                                <span class="clock-label">MISSION ELAPSED</span>
+                                <strong id="mission-clock-display">T+00:00:00</strong>
+                                <span class="clock-chevron">＋</span>
+                            </button>
+                            <div class="mission-clock-panel" id="mission-clock-panel" hidden>
+                                <span class="clock-panel-kicker">MISSION SESSION CLOCK</span>
+                                <strong class="clock-large" id="mission-clock-large">T+00:00:00</strong>
+                                <p>Track session time and timestamp field observations.</p>
+                                <div class="clock-actions">
+                                    <button type="button" id="mission-clock-start">START</button>
+                                    <button type="button" id="mission-clock-reset">RESET</button>
+                                    <button type="button" id="mission-clock-stamp">STAMP NOTE</button>
+                                </div>
+                                <span class="clock-status" id="mission-clock-status" role="status">Clock paused</span>
+                            </div>
+                        </div>
+
                     </div>
 
                     <!-- DATA PANEL -->
