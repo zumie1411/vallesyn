@@ -520,3 +520,41 @@ button {
 .clock-actions button:hover{filter:brightness(1.15)}
 .clock-status{display:block;margin-top:10px;color:#8291a7;font-size:8px}
 @media(max-width:600px){.mission-clock{right:10px;bottom:10px;width:min(270px,calc(100% - 20px))}.mission-clock-toggle{padding:9px}.clock-label{font-size:7px}.mission-clock-toggle strong{font-size:10px}}
+
+
+/* Crew Support workspace */
+.crew-support{padding:25px 0 12px}
+.crew-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:20px}
+.crew-kicker,.crew-card-kicker{color:var(--accent);font:9px 'DM Mono',monospace;letter-spacing:1.5px}
+.crew-heading h2{margin:8px 0;font-size:22px}
+.crew-heading p,.crew-muted{color:var(--muted);font-size:11px;line-height:1.6}
+.crew-local-tag{padding:8px 10px;border:1px solid #344359;border-radius:4px;color:#9bb3c8;font:8px 'DM Mono',monospace;white-space:nowrap}
+.crew-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.crew-card{min-width:0;padding:18px;border:1px solid var(--border);border-radius:7px;background:var(--surface)}
+.crew-card h3{margin:9px 0;color:#e8edf5;font-size:16px}
+.crew-card>label{display:flex;flex-direction:column;gap:7px;margin-top:14px;color:#b9c6d6;font:9px 'DM Mono',monospace;letter-spacing:.5px}
+.crew-card select,.crew-card textarea{width:100%;padding:10px;border:1px solid #344359;border-radius:4px;background:#0a111b;color:#e2eaf4;font:11px Inter,sans-serif}
+.crew-card textarea{resize:vertical;line-height:1.5}
+.crew-advisory-list{display:grid;gap:9px;margin:14px 0;padding-left:17px;color:#c4cfdd;font-size:10px;line-height:1.55}
+.crew-link-button,.crew-primary,.crew-secondary{padding:10px 12px;border:1px solid #40516a;border-radius:4px;background:#172337;color:#dce4ee;font:8px 'DM Mono',monospace;letter-spacing:.7px;cursor:pointer}
+.crew-link-button:hover,.crew-secondary:hover{border-color:var(--accent);color:var(--accent)}
+.eva-checklist{display:grid;gap:11px;margin-top:16px}
+.eva-checklist label{display:flex;align-items:flex-start;gap:9px;color:#c2cedd;font-size:10px;line-height:1.45}
+.eva-checklist input{margin-top:1px;accent-color:var(--green)}
+.eva-progress{display:flex;align-items:center;gap:12px;margin-top:17px;color:#9aa9bc;font:8px 'DM Mono',monospace}
+.eva-progress>div{height:5px;flex:1;overflow:hidden;border-radius:5px;background:#263449}
+.eva-progress i{display:block;width:0;height:100%;background:var(--green);transition:width .2s}
+.crew-footnote,.crew-disclaimer{color:#77879d;font-size:9px;line-height:1.6}
+.crew-footnote{margin-top:12px}
+.crew-comms-card{grid-column:1/-1}
+.crew-comms-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}
+.crew-primary{border-color:var(--accent);background:var(--accent);color:#10151c}
+.crew-primary:disabled{opacity:.5;cursor:not-allowed}
+.crew-comms-status{margin-top:12px;color:#d7b28f;font-size:10px;line-height:1.5}
+.crew-comms-log{margin-top:10px;padding:11px;border:1px solid #27364a;border-radius:4px;background:#080f19;color:#9fb0c5;font:9px 'DM Mono',monospace;line-height:1.6;overflow-wrap:anywhere}
+.crew-external-links{display:flex;flex-wrap:wrap;gap:15px;margin-top:14px}
+.crew-external-links a{color:#d8a57e;font:8px 'DM Mono',monospace;letter-spacing:.7px;text-decoration:none}
+.crew-external-links a:hover{text-decoration:underline}
+.crew-disclaimer{margin-top:15px;padding:12px;border:1px solid #344359;border-radius:5px;background:#0b131f}
+@media(max-width:900px){.crew-grid{grid-template-columns:1fr}.crew-comms-card{grid-column:auto}}
+@media(max-width:600px){.crew-heading{flex-direction:column}.crew-heading h2{font-size:19px}.crew-card{padding:14px}}
