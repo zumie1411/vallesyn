@@ -35,6 +35,10 @@ const pages = {
     crew: {
         title: "Crew Support",
         description: "Review terrain observations, EVA planning reminders and simulated Earth–Mars communications."
+    },
+    environment: {
+        title: "Mars Environmental Intelligence",
+        description: "Browse archived Mars atmospheric and environmental instrument datasets."
     }
 };
 
@@ -70,11 +74,13 @@ export function initNavigation(marsMap) {
         const layers = document.getElementById("layers-dashboard");
         const planner = document.getElementById("mission-planner");
         const crew = document.getElementById("crew-support");
+        const environment = document.getElementById("mars-environment");
 
         if (science) science.hidden = true;
         if (layers) layers.hidden = true;
         if (planner) planner.hidden = true;
         if (crew) crew.hidden = page !== "crew";
+        if (environment) environment.hidden = page !== "environment";
 
         if (workspace) workspace.hidden = !isGlobePage;
         if (bottom) bottom.hidden = !isGlobePage;
