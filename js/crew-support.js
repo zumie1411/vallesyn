@@ -69,6 +69,10 @@ export function initCrewSupport() {
         send.disabled = false;
     });
 
+    document.getElementById("crew-open-slope").addEventListener("click", () => {
+        document.querySelector('[data-page="slope"]')?.click();
+    });
+
     updateAdvisory();
     updateChecks();
     console.log("Vallesyn Crew Support initialized.");
