@@ -558,3 +558,35 @@ button {
 .crew-disclaimer{margin-top:15px;padding:12px;border:1px solid #344359;border-radius:5px;background:#0b131f}
 @media(max-width:900px){.crew-grid{grid-template-columns:1fr}.crew-comms-card{grid-column:auto}}
 @media(max-width:600px){.crew-heading{flex-direction:column}.crew-heading h2{font-size:19px}.crew-card{padding:14px}}
+
+
+/* Mars Environmental Intelligence */
+.environment-workspace{display:flex;flex-direction:column;gap:18px;padding:22px;border:1px solid var(--border);border-radius:8px;background:var(--surface)}
+.environment-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.environment-kicker,.environment-card-kicker{color:var(--accent);font:9px 'DM Mono',monospace;letter-spacing:1.5px}
+.environment-heading h2{margin:8px 0;font-size:22px}
+.environment-heading p,.environment-card p,.environment-source-card p{color:var(--muted);font-size:11px;line-height:1.65}
+.environment-archive-tag{padding:8px 10px;border:1px solid #344359;border-radius:4px;color:#b7c5d6;font:9px 'DM Mono',monospace;white-space:nowrap}
+.environment-notice{padding:14px 16px;border:1px solid #725b3c;border-radius:6px;background:#2a2118}
+.environment-notice strong{color:#e9b58d;font:10px 'DM Mono',monospace;letter-spacing:1px}
+.environment-notice p{margin-top:7px;color:#c4b5a4;font-size:11px;line-height:1.6}
+.environment-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.environment-card,.environment-source-card,.environment-notes-card{display:flex;flex-direction:column;gap:10px;padding:17px;border:1px solid var(--border);border-radius:6px;background:#0b131f}
+.environment-card h3,.environment-source-card h3,.environment-notes-card h3{font-size:14px}
+.environment-card p{min-height:58px}
+.environment-data-type{color:#8fa0b5;font:8px 'DM Mono',monospace;letter-spacing:.7px}
+.environment-card a,.environment-source-card a{color:#e4b18a;font:9px 'DM Mono',monospace;letter-spacing:.7px;text-decoration:none}
+.environment-card a:hover,.environment-source-card a:hover{text-decoration:underline}
+.environment-lower{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.environment-source-card p{margin-bottom:4px}
+.environment-notes-card label{color:#94a4b8;font-size:10px}
+.environment-notes-card textarea{width:100%;padding:10px;border:1px solid #2a3a50;border-radius:5px;background:#080f19;color:var(--text);font:11px Inter,sans-serif;resize:vertical}
+.environment-notes-card button{align-self:flex-start;padding:10px 12px;border:1px solid var(--accent);border-radius:4px;background:#d99b70;color:#10151c;font:9px 'DM Mono',monospace;cursor:pointer}
+#environment-note-status{color:#8b9bb0;font-size:9px}
+.environment-saved-notes{display:flex;flex-direction:column;gap:8px;max-height:180px;overflow:auto;color:#c2ccda;font-size:10px}
+.environment-saved-notes article{padding:8px;border-top:1px solid var(--border)}
+.environment-saved-notes small{color:#e1ac82;font:8px 'DM Mono',monospace}
+.environment-saved-notes p{margin-top:5px;line-height:1.5;white-space:pre-wrap}
+.environment-disclaimer{color:#7e8da2;font-size:9px;line-height:1.6}
+@media(max-width:1100px){.environment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.environment-workspace{padding:14px}.environment-heading{flex-direction:column}.environment-grid,.environment-lower{grid-template-columns:1fr}.environment-card p{min-height:0}}
