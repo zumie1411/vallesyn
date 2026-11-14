@@ -1,10 +1,12 @@
 # 🔴 VALLESYN
-### Explore Mars. Understand the terrain. Imagine the next mission.
+### The Next Frontier Is Red.
 
 <p align="center">
-  <a href="https://vallesyn.onrender.com"><strong>🚀 Open Live Website</strong></a>
+  <a href="https://vallesyn.onrender.com"><strong>🚀 Visit the Mission Portal</strong></a>
   &nbsp;•&nbsp;
-  <a href="https://github.com/zumie1411/vallesyn"><strong>💻 View Source Code</strong></a>
+  <a href="https://vallesyn.onrender.com/explorer.html"><strong>🪐 Open the Mars Terrain Explorer</strong></a>
+  &nbsp;•&nbsp;
+  <a href="https://github.com/zumie1411/vallesyn"><strong>💻 Source Code</strong></a>
 </p>
 
 <p align="center">
@@ -13,22 +15,20 @@
   <img src="https://img.shields.io/badge/Data-NASA%20Planetary%20Datasets-1d5b91?style=for-the-badge" alt="NASA planetary datasets">
 </p>
 
-**Vallesyn** is a web-based Mars exploration and terrain intelligence project. It brings planetary data and interactive 3D visualisation together to make the Martian surface easier to explore and understand.
+**Vallesyn** is a web-based Mars exploration and terrain intelligence project. It combines planetary datasets with interactive 3D visualisation to make the Martian surface easier to explore and understand.
 
-## 🌐 Explore Vallesyn
+## 🌐 Start exploring
 
-<p align="center">
-  <a href="https://vallesyn.onrender.com">
-    <img src="https://img.shields.io/badge/LAUNCH%20VALLESYN-Open%20the%20live%20experience-e45b35?style=for-the-badge" alt="Launch Vallesyn">
-  </a>
-</p>
+1. **Visit the [Mission Portal](https://vallesyn.onrender.com/)** for the project introduction, mission, data, technology, and impact.
+2. Select **Launch Vallesyn** to open the interactive Mars terrain explorer.
+3. You can also [open the explorer directly](https://vallesyn.onrender.com/explorer.html).
 
-## 🪐 What you can explore
+## 🪐 Inside the platform
 
 - **Global Mars Explorer** — Explore Mars through an interactive 3D globe.
 - **Regional Terrain Explorer** — Investigate the East Melas region using terrain data.
 - **Elevation & Slope** — Visualise elevation and project-defined slope classes.
-- **Surface Visualisation** — Switch between available scientific data layers.
+- **Scientific Data Layers** — Switch between available terrain visualisations.
 - **Mission Planner** — Select exploration areas and keep mission notes during a session.
 
 ## 🛰️ Data behind the experience
@@ -36,7 +36,7 @@
 Vallesyn works with planetary datasets including:
 
 - **MOLA** — Mars Orbiter Laser Altimeter elevation data.
-- **CTX** — Context Camera terrain data from the Mars Reconnaissance Orbiter.
+- **CTX** — Context Camera imagery from the Mars Reconnaissance Orbiter.
 
 The datasets are processed and visualised to support exploration of Martian topography.
 
@@ -60,21 +60,22 @@ cd vallesyn
 python -m http.server 8000
 ```
 
-Then open **http://localhost:8000** in your browser.
+Open **http://localhost:8000** to view the mission portal. Use **http://localhost:8000/explorer.html** to open the terrain explorer directly.
 
 ## 📁 Project layout
 
 ```text
 vallesyn/
-├── assets/
-├── css/
-├── js/
-├── data/
+├── assets/                 # Application assets and visualisations
+├── css/                    # Explorer stylesheets
+├── js/                     # Explorer JavaScript modules
+├── data/                   # Planetary datasets and processed data
 ├── mission-portal/
-│   ├── index.html
+│   ├── index.html          # Intro / mission portal
 │   ├── css/
 │   └── js/
-├── index.html
+├── index.html              # Redirects to the mission portal
+├── explorer.html           # Interactive Mars terrain explorer
 └── README.md
 ```
 
@@ -89,5 +90,5 @@ Vallesyn is an evolving project. Features, datasets, and analysis workflows may 
 ---
 
 <p align="center">
-  **VALLESYN** · A closer look at the Red Planet.
+  **VALLESYN** · Built with curiosity. Inspired by exploration.
 </p>
