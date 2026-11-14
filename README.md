@@ -83,6 +83,12 @@ vallesyn/
 
 Vallesyn is an exploration and visualisation project, not a substitute for peer-reviewed scientific analysis. Slope classes use project-defined thresholds, and the roughness layer is a rendered visual reference rather than a numerical roughness measurement. Interpret visualisations in the context of dataset resolution, coverage, projection, and processing assumptions.
 
+## 🤖 Use of Super Intelligence (SI) Tools
+
+Generative AI tools, including **ChatGPT**, were used during Vallesyn's development for brainstorming, technical explanations, coding assistance, debugging support, and drafting project documentation.
+
+AI assistance supported the development process. The developer reviewed and adapted suggestions during implementation and tested the project's features. AI-generated assistance is not presented as NASA-produced scientific data, and the planetary datasets are credited to their original sources above.
+
 ## 🚧 Project status
 
 Vallesyn is an evolving project. Features, datasets, and analysis workflows may change as development continues.
