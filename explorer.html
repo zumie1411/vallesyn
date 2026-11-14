@@ -395,6 +395,38 @@
                         </article>
                     </div>
 
+
+                    <section class="meda-analyzer" id="meda-analyzer">
+                        <div class="meda-analyzer-heading">
+                            <div>
+                                <span class="environment-card-kicker">04 / SCIENTIFIC DATA WORKBENCH</span>
+                                <h3>MEDA CSV Data Analyzer</h3>
+                                <p>Import a downloaded MEDA table to inspect real instrument observations locally.</p>
+                            </div>
+                            <span class="meda-local-badge">LOCAL FILE ANALYSIS</span>
+                        </div>
+                        <div class="meda-upload-row">
+                            <label class="meda-file-label" for="meda-csv-file">SELECT MEDA CSV FILE</label>
+                            <input id="meda-csv-file" type="file" accept=".csv,.txt,text/csv,text/plain">
+                            <span id="meda-file-status" role="status">No file loaded. Your file stays in this browser.</span>
+                        </div>
+                        <div class="meda-controls">
+                            <label>X AXIS / TIME OR SOL
+                                <select id="meda-x-column" disabled><option>Load a CSV first</option></select>
+                            </label>
+                            <label>Y AXIS / MEASUREMENT
+                                <select id="meda-y-column" disabled><option>Load a CSV first</option></select>
+                            </label>
+                            <button type="button" id="meda-plot-button" disabled>PLOT DATA</button>
+                        </div>
+                        <div class="meda-chart-wrap">
+                            <canvas id="meda-chart" aria-label="MEDA data plot" role="img"></canvas>
+                            <p id="meda-chart-empty">Upload a MEDA CSV to generate a plot.</p>
+                        </div>
+                        <div class="meda-summary" id="meda-summary">No measurements analyzed yet.</div>
+                        <p class="meda-analyzer-note">CSV columns and units vary by MEDA product. Confirm the selected field, units, quality flags and product documentation before interpreting results. The analyzer does not create forecasts or crew-safety ratings.</p>
+                    </section>
+
                     <div class="environment-lower">
                         <article class="environment-source-card">
                             <span class="environment-card-kicker">PRIMARY DATA SOURCE</span>
