@@ -500,3 +500,23 @@ button {
 .science-disclaimer{margin-top:16px;padding-top:12px;border-top:1px solid #27364a;color:#77879d;font-size:9px;line-height:1.6}
 @media(max-width:900px){.mission-console{margin:0 20px 25px}.console-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.mission-console{margin:0 12px 20px;padding:16px}.console-heading{flex-direction:column}.brief-two,.brief-checks{grid-template-columns:1fr}.console-heading h2{font-size:19px}}
+
+
+/* Compact Mission Elapsed Time clock */
+.mission-clock{position:absolute;z-index:4;right:16px;bottom:16px;width:min(290px,calc(100% - 32px));font-family:'DM Mono',monospace}
+.mission-clock-toggle{display:flex;align-items:center;gap:9px;width:100%;padding:10px 12px;border:1px solid #46566c;border-radius:5px;background:#0d1726ed;color:#dce5f0;cursor:pointer;text-align:left;backdrop-filter:blur(8px)}
+.clock-live-dot{width:7px;height:7px;flex:0 0 7px;border-radius:50%;background:#65c99b;box-shadow:0 0 9px #65c99b77}
+.clock-label{color:#9baabd;font-size:8px;letter-spacing:1px}
+.mission-clock-toggle strong{margin-left:auto;color:#f0c19a;font-size:11px;letter-spacing:.6px}
+.clock-chevron{color:#d99b70;font-size:14px}
+.mission-clock-panel{margin-top:6px;padding:15px;border:1px solid #344359;border-radius:6px;background:#0b1421f2;box-shadow:0 12px 35px #0007;backdrop-filter:blur(10px)}
+.mission-clock-panel[hidden]{display:none}
+.clock-panel-kicker{color:#d99b70;font-size:8px;letter-spacing:1.5px}
+.clock-large{display:block;margin:9px 0;color:#f1c29b;font-size:27px;letter-spacing:1px}
+.mission-clock-panel p{color:#91a1b6;font:10px Inter,sans-serif;line-height:1.5}
+.clock-actions{display:flex;gap:6px;margin-top:13px}
+.clock-actions button{flex:1;padding:8px 5px;border:1px solid #40516a;border-radius:4px;background:#172337;color:#dce4ee;font:8px 'DM Mono',monospace;letter-spacing:.5px;cursor:pointer}
+.clock-actions button:first-child{border-color:#d99b70;background:#d99b70;color:#10151c}
+.clock-actions button:hover{filter:brightness(1.15)}
+.clock-status{display:block;margin-top:10px;color:#8291a7;font-size:8px}
+@media(max-width:600px){.mission-clock{right:10px;bottom:10px;width:min(270px,calc(100% - 20px))}.mission-clock-toggle{padding:9px}.clock-label{font-size:7px}.mission-clock-toggle strong{font-size:10px}}
