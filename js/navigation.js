@@ -31,6 +31,10 @@ const pages = {
     planner: {
         title: "Mission Planner",
         description: "Prepare and evaluate potential Martian exploration regions."
+    },
+    crew: {
+        title: "Crew Support",
+        description: "Review terrain observations, EVA planning reminders and simulated Earth–Mars communications."
     }
 };
 
@@ -65,10 +69,12 @@ export function initNavigation(marsMap) {
         const science = document.getElementById("science-dashboard");
         const layers = document.getElementById("layers-dashboard");
         const planner = document.getElementById("mission-planner");
+        const crew = document.getElementById("crew-support");
 
         if (science) science.hidden = true;
         if (layers) layers.hidden = true;
         if (planner) planner.hidden = true;
+        if (crew) crew.hidden = page !== "crew";
 
         if (workspace) workspace.hidden = !isGlobePage;
         if (bottom) bottom.hidden = !isGlobePage;
