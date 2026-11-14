@@ -4,7 +4,8 @@ import { initLayers } from "./layers.js";
 import { initNavigation } from "./navigation.js";
 import { initScience } from "./science.js";
 import { initPlanner } from "./planner.js";
-import { initEnvironment } from "./enviroment.js";\nimport { initMissionConsole } from "./mission-console.js";
+import { initEnvironment } from "./enviroment.js";
+import { initMissionConsole } from "./mission-console.js";
 
 function initializeVallesyn() {
     console.log("Initializing Vallesyn...");
@@ -16,7 +17,8 @@ function initializeVallesyn() {
     initLayers(marsMap);
     initNavigation(marsMap);
     initScience();
-    initPlanner();\n    initMissionConsole();
+    initPlanner();
+    initMissionConsole();
 
     window.Vallesyn = {
         marsMap
